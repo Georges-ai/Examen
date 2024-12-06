@@ -6,10 +6,12 @@
 
 // This function is called upon when an incoming message from mqtt is arrived
 int msgarrvd(void *context, char *topicName, int topicLen, MQTTClient_message *message) {
-    char *error_in = message->payload;
+    char *msg = message->payload;
     
     // print incoming message
-    printf( "Received message: <%s>\n", error_in );   
+    printf( "Received message: <%s>\n", msg ); 
+    
+      
     
     // Free the message and topic
     MQTTClient_freeMessage(&message);
