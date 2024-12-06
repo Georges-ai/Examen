@@ -19,6 +19,28 @@
 //     float totaalGasVerbruik;
 // };
 
+void totaal(char *dagVerbruik, char *nachtVerbruik,char *dagOpbrengst,char *nachtOpbregst,char *gasVerbruik,char *datum){
+    float totaalStroomVerbruik, totaalStroomOpbrengst, DV, NV, DO, NO, GV;
+
+    DV = atof(dagVerbruik);
+    NV = atof(nachtVerbruik);
+    DO = atof(dagOpbrengst);
+    NO = atof(nachtOpbregst);
+    GV = atof(gasVerbruik);
+
+    totaalStroomVerbruik=  DV + NV;
+    totaalStroomOpbrengst = DO + NO;
+
+    printf("Datum: %s\n", datum);
+    printf("________________\n");
+    printf("STROOM:\n");
+    printf("        Totaal verbruk      = %f\n", totaalStroomVerbruik);
+    printf("        Totaal opbrengst    = %f\n", totaalStroomOpbrengst);
+    printf("GAS:");
+    printf("        Totaal verbruik     = %f\n", GV);
+    
+    return;
+}
 
 //print values
 void print_Start_values(char *tijd, char *DTotVerbruik, char *DTotOpbrengst, char *NTotVerbruik, char *NTotOpbrengst, char *TotGas) {
@@ -39,7 +61,7 @@ void print_Start_values(char *tijd, char *DTotVerbruik, char *DTotOpbrengst, cha
 
     totaal(DTotVerbruik, NTotVerbruik, DTotOpbrengst, NTotOpbrengst, TotGas, tijd);
 }
-
+// split de string aan de hand van ";"
 void split_str(char *msg){
     char *token;
     char datumTijdStroom[DATA_TIME_LEN], tariefIndicator[DATA_LEN], actueelStroomverbruik[DATA_LEN], actueelSpanning[DATA_LEN], totaalDagVerbruik[DATA_LEN],
@@ -81,30 +103,6 @@ void split_str(char *msg){
     
     print_Start_values(datumTijdStroom, totaalDagVerbruik ,totaalDagOpbrengst, totaalNachtVerbruik, totaalNachtOpbrengst, totaalGasVerbruik);
    
-
-    return;
-}
-
-void totaal(char dagVerbruik, char nachtVerbruik,char dagOpbrengst,char nachtOpbregst,char gasVerbruik,char datum){
-    float totaalStroomVerbruik, totaalStroomOpbrengst, DV, NV, DO, NO, GV;
-
-    DV = atof(dagVerbruik);
-    NV = atof(nachtVerbruik);
-    DO = atof(dagOpbrengst);
-    NO = atof(nachtOpbregst);
-    GV = atof(gasVerbruik);
-
-    totaalStroomVerbruik=  DV + NV;
-    totaalStroomOpbrengst = DO + NO;
-
-    printf("Datum: %s\n", datum);
-    printf("________________\n");
-    printf("STROOM:\n");
-    printf("        Totaal verbruk      = %f", totaalStroomVerbruik);
-    printf("        Totaal opbrengst    = %f", totaalStroomOpbrengst);
-    printf("GAS:");
-    printf("        Totaal verbruik     = %f", GV);
-    
     return;
 }
 
