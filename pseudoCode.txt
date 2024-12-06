@@ -1,0 +1,21 @@
+msgarrvd(parameters)
+    open log file
+    scherijf in log file
+    split_string function
+
+split_string(parameters)
+    opdelen aan de hand van ";"
+    Print_start_values(parameters)
+
+Print_start_values(parameters)
+    start waarden printen
+    totaal(parameters)
+
+totaal(parameters)
+    print de totaal verbruik
+    
+
+
+main()
+    maak mqtt client
+
