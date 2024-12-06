@@ -36,7 +36,7 @@ void totaal(char *dagVerbruik, char *nachtVerbruik,char *dagOpbrengst,char *nach
     printf("STROOM:\n");
     printf("        Totaal verbruk      = %f\n", totaalStroomVerbruik);
     printf("        Totaal opbrengst    = %f\n", totaalStroomOpbrengst);
-    printf("GAS:");
+    printf("GAS:\n  ");
     printf("        Totaal verbruik     = %f\n", GV);
     
     return;
