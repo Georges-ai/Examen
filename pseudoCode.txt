@@ -13,8 +13,6 @@ Print_start_values(parameters)
 
 totaal(parameters)
     print de totaal verbruik
-    
-
 
 main()
     maak mqtt client
