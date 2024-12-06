@@ -12,7 +12,7 @@
 
 #define ADDRESS     "tcp://192.168.0.107:1883"  // Local RP MQTT broker address
 #define CLIENTID    "CFileReaderClient"
-#define TOPIC       "P1/MDx"            // Replace with your topic
+#define TOPIC       "P1/MD7"            // Replace with your topic
 #define QOS         1
 #define TIMEOUT     10000L
 
